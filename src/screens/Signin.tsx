@@ -15,7 +15,7 @@ function SigninScreen(): JSX.Element {
     const [password, setPassword] = useState('supersecret');
     const [failed, setFailed] = useState(false);
     const [doSignin, { data, loading, error }] = useMutation(SIGNIN);
-
+    
     const onSubmit = async () => {
         setFailed(false);
         const result = await doSignin({
